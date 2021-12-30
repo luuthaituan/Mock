@@ -10,13 +10,12 @@ class HomeController extends Controller {
 
     public function showPost() {
         $posts = $this->todo->getData();
-//        var_dump($posts);
         $this->view('main.php', ['posts' => $posts]);
     }
 
     public function deletePost($param) {
         $posts = $this->todo->deleteData($param['id']);
-
+        header('Location: /todo');
     }
 
 

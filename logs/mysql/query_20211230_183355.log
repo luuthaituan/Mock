@@ -1,0 +1,1 @@
+{"logMessage":"SLOW SQL","logDateTime":"2021-12-30 18:33:55","data":{"sql":"DELETE FROM ToDo WHERE id= 5 ","time":"9.39 ms"}}

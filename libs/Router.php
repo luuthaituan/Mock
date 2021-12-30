@@ -26,7 +26,6 @@ class Router {
         foreach ($this->routeTable[$method] as $pattern => $controller) {
             $score[] = $this->getScore($path, $pattern); //loi ra pattern,, tinh diem
         }
-
         usort($score, function ($a, $b){
 
            if($a['score']=== $b['score']){
@@ -34,10 +33,8 @@ class Router {
            }
            return $a['score'] < $b['score'];
         });
-//        var_dump($this->routeTable);
-        $this->currentRoute = $this->routeTable[$method][$pattern];
+        $this->currentRoute = $this->routeTable[$method][$score[0]['pattern']];
         $this->currentRoute['param'] = $score[0]['param'];
-//        var_dump($this->currentRoute);
     }
     public function dispatch() {
         if($this->getRoute()) {
@@ -70,11 +67,11 @@ class Router {
 
         $score = 0;
         $param = [];
-        foreach ($my_path as $key => $path) {
-            if($url_server[$key]== $path ){
+        foreach ($my_path as $key => $value) {
+            if($url_server[$key]== $value ){
                 $score+=1;
             }else{
-                $convert = $this->convertParam($path);
+                $convert = $this->convertParam($value);
                 if($convert){
                     $param[$convert]= $url_server[$key];
                 }

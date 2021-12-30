@@ -17,7 +17,7 @@ use app\controllers\HomeController;
 
 $route = new libs\Router();
 
-//$route->register('GET', '/todo/{id}', [HomeController::class, 'deletePost']);
+$route->register('GET', '/todo/{id}', [HomeController::class, 'deletePost']);
 $route->register('GET', '/todo', [HomeController::class, 'showPost']);
 //echo "<pre>";
 //var_dump($route->getRoute());
