@@ -1,0 +1,1 @@
+{"logMessage":"SLOW SQL","logDateTime":"2021-12-30 14:54:34","data":{"sql":"SELECT * FROM todo","time":"2.65 ms"}}
