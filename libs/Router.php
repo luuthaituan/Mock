@@ -34,9 +34,10 @@ class Router {
            }
            return $a['score'] < $b['score'];
         });
-
+//        var_dump($this->routeTable);
         $this->currentRoute = $this->routeTable[$method][$pattern];
         $this->currentRoute['param'] = $score[0]['param'];
+//        var_dump($this->currentRoute);
     }
     public function dispatch() {
         if($this->getRoute()) {
@@ -87,7 +88,7 @@ class Router {
         $start = substr($value, 0,1);
         $end = substr($value, -1, 1);
         if ($start == '{' && $end == '}'){
-            return str_replace(['{', '}' ], ' ', $value); //thay {} bang khoang trong string value
+            return str_replace(['{', '}' ], '', $value); //thay {} bang khoang trong string value
         }
         return '';
 

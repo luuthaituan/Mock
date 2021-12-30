@@ -16,10 +16,11 @@ use app\controllers\HomeController;
 
 
 $route = new libs\Router();
-$route->register('GET', '/todo', [HomeController::class, 'showPost']);
+
 //$route->register('GET', '/todo/{id}', [HomeController::class, 'deletePost']);
-//echo "<bre>";
-//var_dump($route->getRouteTable());
+$route->register('GET', '/todo', [HomeController::class, 'showPost']);
+//echo "<pre>";
+//var_dump($route->getRoute());
 //$route->register('GET', '/home/index/{id}', [HomeController::class, 'showPost']);
 //$a = $route->getRouteTable();
 ////var_dump($a);

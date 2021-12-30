@@ -24,8 +24,8 @@
             <td><?= $value['NgayLam'] ?></td>
             <td><?= $value['TrangThai'] ?></td>
             <td>
-                <a href="/users/detail/<?= $value['id'] ?>" class="btn btn-sm" title="Edit"><button>Edit</button></a>
-                <a href="/delete-users/<?= $value['id'] ?>"><button class="btn btn-sm" onclick="return confirm('Are you sure to delete this user?')" title="Delete">Xoa</button></a>
+                <a href="#" class="btn btn-sm" title="Edit"><button>Edit</button></a>
+                <a href="/todo/<?= $value['id'] ?>"><button class="btn btn-sm" onclick="return confirm('Are you sure to delete this user?')" title="Delete">Xoa</button></a>
             </td>
         </tr>
     <?php }?>
