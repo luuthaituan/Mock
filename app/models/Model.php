@@ -10,9 +10,5 @@ class Model extends DB {
 //        $this->db= new \libs\DB();
 //        $this->db->table($this->tablename);
 //    }
-
-
-
-
 }
 
