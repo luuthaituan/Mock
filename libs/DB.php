@@ -1,6 +1,7 @@
 <?php
 namespace libs;
 use PDO;
+
  class DB
  {
      protected $db;
@@ -24,7 +25,6 @@ use PDO;
              echo $e->getMessage();
          }
      }
-
      public function table($table) {
          $this->tableName = $table;
      }
@@ -35,7 +35,6 @@ use PDO;
          $rows = $result->fetchAll();
          return $rows;
      }
-    
      public function insertData($data = [])
      {
          //$data = ['title' => 'title1', 'content' => 'content1' ];
@@ -52,13 +51,11 @@ use PDO;
          $result = $this->queryAll($sql);
          return $result;
      }
-    
      public function deleteData($id)
      {
          $sql = "DELETE FROM $this->tableName WHERE id= $id " ;
          return  $this->queryAll($sql);
      }
-    
      public function updateData($id, $data= [])
      {
         $sql = "UPDATE $this->tableName SET "; 
@@ -79,7 +76,6 @@ use PDO;
         $this->writeLog($executeTime, $sql);
         return $result;
      }
-
      public function writeLog($executeTime, $sql){
         $logs = [
             'logMessage' => 'SLOW SQL',
@@ -90,8 +86,7 @@ use PDO;
         $query = 'query_';
         if($executeTime > 50){
             $query = 'slow_';
-        }
-        
+        }    
         if(!file_exists(dirname(__DIR__).'/logs/mysql')){
             mkdir(dirname(__DIR__).'/logs/mysql', 0777);
         }
@@ -99,6 +94,4 @@ use PDO;
         $path = str_replace('/', '\\', $path);
         file_put_contents($path, $logs);
     }
-
-
  }

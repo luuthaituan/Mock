@@ -10,13 +10,7 @@ spl_autoload_register(function ($class){
 //require '../libs/DB.php';
 //require '../app/controllers/HomeController.php';
 use app\controllers\HomeController;
-
-
-
-
-
 $route = new libs\Router();
-
 $route->register('GET', '/todo/{id}', [HomeController::class, 'deletePost']);
 $route->register('GET', '/todo', [HomeController::class, 'showPost']);
 //echo "<pre>";

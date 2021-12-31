@@ -64,7 +64,6 @@ class Router {
         if(count($url_server) != count($my_path)){
             return ['score' => 0, 'param' => 0, 'pattern' => $path];
         }
-
         $score = 0;
         $param = [];
         foreach ($my_path as $key => $value) {
@@ -77,7 +76,6 @@ class Router {
                 }
             }
         }
-
         return ['score' => $score, 'param' => $param, 'pattern' => $path];
     }
 
@@ -88,7 +86,5 @@ class Router {
             return str_replace(['{', '}' ], '', $value); //thay {} bang khoang trong string value
         }
         return '';
-
-
     }
 }

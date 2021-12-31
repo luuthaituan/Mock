@@ -2,6 +2,7 @@
 namespace app\controllers;
 use libs\DB;
 use app\models\ToDo;
+
 class HomeController extends Controller {
 
     public function  __construct() {
@@ -17,7 +18,5 @@ class HomeController extends Controller {
         $posts = $this->todo->deleteData($param['id']);
         header('Location: /todo');
     }
-
-
 
 }

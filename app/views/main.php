@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-
 <div class="container">
     <h1>TODO APP</h1>
     <table class="table table-bordered">
@@ -41,6 +40,5 @@
         </tbody>
     </table>
 </div>
-
 </body>
 </html>
