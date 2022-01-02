@@ -13,6 +13,7 @@
 
 <div class="container">
     <h1>TODO APP</h1>
+    <a href="/todo/add">Add</a>
     <table class="table table-bordered">
         <thead>
         <tr>
@@ -41,6 +42,7 @@
         </tbody>
     </table>
 </div>
+
 
 </body>
 </html>

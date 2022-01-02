@@ -29,7 +29,7 @@ class Router {
         usort($score, function ($a, $b){
 
            if($a['score']=== $b['score']){
-               return count($a['param'])< count($b['param']);
+               return count($a['param']) < count($b['param']);
            }
            return $a['score'] < $b['score'];
         });

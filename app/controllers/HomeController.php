@@ -16,7 +16,7 @@ class HomeController extends Controller {
 
     public function deletePost($param) {
         $posts = $this->todo->deleteData($param['id']);
-        header('Location: /todo');
+        header('Location: /todo/home');
     }
 
     public function showViewAdd() {
@@ -27,9 +27,10 @@ class HomeController extends Controller {
         $congviec = $_POST["congviec"];
         $ngaylam = $_POST['ngaylam'];
         $trangthai = $_POST['trangthai'];
-        $add = $this->todo->prepare("INSERT INTO ToDo VALUES ($congviec, $ngaylam, $trangthai)");
-        $add -> execute();
+        $add = $this->todo->insertData(['congviec' => $congviec, 'ngaylam' => $ngaylam, 'trangthai' => $trangthai]);
+//        $add -> execute();
 //        var_dump($add);
-        header('Location: /todo');
+
+        header('Location: /todo/home');
     }
 }

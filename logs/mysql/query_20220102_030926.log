@@ -1,0 +1,1 @@
+{"logMessage":"SLOW SQL","logDateTime":"2022-01-02 03:09:26","data":{"sql":"INSERT INTO ToDo () values () ","time":"8.00 ms"}}

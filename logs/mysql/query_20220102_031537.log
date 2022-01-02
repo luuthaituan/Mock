@@ -1,0 +1,1 @@
+{"logMessage":"SLOW SQL","logDateTime":"2022-01-02 03:15:37","data":{"sql":"INSERT INTO ToDo (congviec, ngaylam, trangthai) values ('tuan', 'hoc bai', 'php') ","time":"7.00 ms"}}
